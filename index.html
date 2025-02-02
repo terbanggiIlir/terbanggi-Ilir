@@ -154,9 +154,11 @@
 
             <h3 class="section__title">Tingkat Pendidikan</h3>
 
-            <div class="experience__container container grid">
-                <div class="experience__content grid">
-            <canvas id="educationChart"></canvas>
+            <div class="experience__container container">
+                <div class="experience__content" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 400px;">
+                    <canvas id="educationChart" style="max-width: 100%; height: 100%;"></canvas>
+                </div>
+            </div>
 
             <script>
                 const ctx = document.getElementById('educationChart').getContext('2d');
@@ -257,101 +259,105 @@
             <div class="tax__container container grid">
                 <div class="tax__content grid">
                     <div class="tax__data">
+                        <img src="assets/img/masjid.png" alt="Masjid Icon" class="tax__icon">
                         <h2 class="tax__number">845</h2>
                         <span class="tax__description">Islam</span>
                     </div>
 
                     <div class="tax__data">
+                        <img src="assets/img/gereja.png" alt="Gereja Kristen Icon" class="tax__icon">
                         <h2 class="tax__number">986</h2>
                         <span class="tax__description">Kristen</span>
                     </div>
 
                     <div class="tax__data">
+                        <img src="assets/img/gereja 2.png" alt="Gereja Katolik Icon" class="tax__icon">
                         <h2 class="tax__number">130</h2>
                         <span class="tax__description">Katolik</span>
                     </div>
 
                     <div class="tax__data">
+                        <img src="assets/img/pura.png" alt="Pura Hindu Icon" class="tax__icon">
                         <h2 class="tax__number">134</h2>
                         <span class="tax__description">Hindu</span>
                     </div>
 
                     <div class="tax__data">
+                        <img src="assets/img/vihara.png" alt="Vihara Budha Icon" class="tax__icon">
                         <h2 class="tax__number">78</h2>
                         <span class="tax__description">Budha</span>
                     </div>
                 </div>
             </div>
 
+
             <h4 class="section__title"> <br>Sarana Pendidikan</h4>
 
             <div class="tax__container container">
-                <div class="tax__content" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-                    <div class="tax__data" style="text-align: center;">
-                        <h2 class="tax__number">5872</h2>
-                        <span class="tax__description">Paud/TK</span>
-                    </div>
-                    <div class="tax__data" style="text-align: center;">
-                        <h2 class="tax__number">286</h2>
-                        <span class="tax__description">SD/MI</span>
-                    </div>
-                    <div class="tax__data" style="text-align: center;">
-                        <h2 class="tax__number">-</h2>
-                        <span class="tax__description">SMP/MTs</span>
-                    </div>
-                    <div class="tax__data" style="text-align: center;">
-                        <h2 class="tax__number">-</h2>
-                        <span class="tax__description">SMA/SMK/MA</span>
-                    </div>
-                    <div class="tax__data" style="text-align: center;">
-                        <h2 class="tax__number">80</h2>
-                        <span class="tax__description">Pondok Pesantren</span>
-                    </div>
-                    <div class="tax__data" style="text-align: center;">
-                        <h2 class="tax__number">5872</h2>
-                        <span class="tax__description">Madrasah</span>
-                    </div>
-                    <div class="tax__data" style="text-align: center;">
-                        <h2 class="tax__number">286</h2>
-                        <span class="tax__description">Guru TK</span>
-                    </div>
-                    <div class="tax__data" style="text-align: center;">
-                        <h2 class="tax__number">-</h2>
-                        <span class="tax__description">Guru SD</span>
-                    </div>
-                    <div class="tax__data" style="text-align: center;">
-                        <h2 class="tax__number">-</h2>
-                        <span class="tax__description">Guru SMP</span>
-                    </div>
-                    <div class="tax__data" style="text-align: center;">
-                        <h2 class="tax__number">80</h2>
-                        <span class="tax__description">Guru SMA</span>
-                    </div>
-                </div>
+                <canvas id="saranaPendidikanChart"></canvas>
             </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const ctx2 = document.getElementById('saranaPendidikanChart').getContext('2d');
+                    const saranaPendidikanChart = new Chart(ctx2, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Paud/TK', 'SD/MI', 'SMP/MTs', 'SMA/SMK/MA', 'Pondok Pesantren', 
+                                    'Madrasah', 'Guru TK', 'Guru SD', 'Guru SMP', 'Guru SMA'],
+                            datasets: [{
+                                label: 'Jumlah Sarana',
+                                data: [2, 2, 1, 1, 6, 10, 21, 24, 1, 3],
+                                backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                                borderColor: 'rgba(54, 162, 235, 1)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                });
+            </script>
 
             <h4 class="section__title"> <br>Sarana Kesehatan</h4>
 
             <div class="tax__container container">
-                <div class="tax__content" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-                    <div class="tax__data" style="text-align: center;">
-                        <h2 class="tax__number">5872</h2>
-                        <span class="tax__description">Puskesmas</span>
-                    </div>
-                    <div class="tax__data" style="text-align: center;">
-                        <h2 class="tax__number">286</h2>
-                        <span class="tax__description">Jumlah <br> Posyandu</span>
-                    </div>
-                    <div class="tax__data" style="text-align: center;">
-                        <h2 class="tax__number">-</h2>
-                        <span class="tax__description">Jumlah <br> Dukun</span>
-                    </div>
-                    <div class="tax__data" style="text-align: center;">
-                        <h2 class="tax__number">-</h2>
-                        <span class="tax__description">Jumlah <br> Mantri</span>
-                    </div>
-                </div>
+                <canvas id="saranaKesehatanChart"></canvas>
             </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const ctx2 = document.getElementById('saranaKesehatanChart').getContext('2d');
+                    const saranaKesehatanChart = new Chart(ctx2, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Puskesmas', 'Posyandu', 'Dukun', 'Mantri'],
+                            datasets: [{
+                                label: 'Jumlah Sarana Kesehatan',
+                                data: [5872, 286, 0, 0],  // Data yang sesuai dengan jumlah sarana
+                                backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                                borderColor: 'rgba(54, 162, 235, 1)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                });
+            </script>
+
         </section>
 
 

@@ -198,6 +198,18 @@ input {
   overflow-x: hidden;
 }
 
+#saranaPendidikanChart {
+  width: 100% !important;
+  max-width: 700px;
+  height: 350px !important;
+}
+
+#saranaKesehatanChart {
+  width: 100% !important;
+  max-width: 500px;
+  height: 250px !important;
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
   padding: 4.5rem 0 2.5rem;
@@ -715,6 +727,18 @@ canvas {
   right: 0;
 }
 
+.tax__data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tax__icon {
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px;
+}
 
 /*=============== VIDEO ===============*/
 .video__container {
