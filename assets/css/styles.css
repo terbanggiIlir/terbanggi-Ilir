@@ -482,6 +482,11 @@ input {
   width: 130px;
 }
 
+.about__bagan{
+  width: 50px;
+  align-items: center;
+}
+
 .about__img-two {
   width: 180px;
 }

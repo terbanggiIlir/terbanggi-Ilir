@@ -338,20 +338,35 @@ input {
   margin-bottom: var(--mb-2);
 }
 
-.about__img {
+/* .about__img {
   display: flex;
   column-gap: 1rem;
   align-items: center;
   justify-content: center;
-}
+} */
 
-.about__img-overlay {
-  overflow: var(--img-hidden);
+.about__img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .about__img-one {
-  width: 130px;
+  display: block;
+  margin: 0 auto;
 }
+
+.about__img p {
+  margin-top: 10px;
+}
+
+
+.about__img-overlay {
+  overflow: var(--img-hidden);
+  align-items: center;
+}
+
 
 .about__img-two {
   width: 180px;
@@ -650,5 +665,62 @@ input {
 @media screen and (min-height: 721px) {
   body {
     margin: 0;
+  }
+}
+
+/* Container untuk kartu batas kampung */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Style untuk kartu batas kampung */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  width: 150px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Ikon dalam kartu */
+.card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+/* Gaya tambahan untuk teks */
+h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: black;
+}
+
+p {
+  font-size: 18px;
+  color: black;
+  text-align: center;
+}
+
+.about__desa {
+  font-size: 14px;
+  color: black;
+  text-align: center;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .card {
+      width: 120px;
   }
 }
