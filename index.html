@@ -15,6 +15,7 @@
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <title>Terbanggi Ilir</title>
 </head>
@@ -121,16 +122,19 @@
             <div class="experience__container container grid">
                 <div class="experience__content grid">
                     <div class="experience__data">
+                        <img class="penduduk__foto" src="assets/img/Pria.png" alt="Pria">
                         <h2 class="experience__number">3.156</h2>
                         <span class="experience__description">Pria</span>
                     </div>
 
                     <div class="experience__data">
+                        <img class="penduduk__foto" src="assets/img/Wanita.png" alt="Wanita">
                         <h2 class="experience__number">3.082</h2>
                         <span class="experience__description">Wanita</span>
                     </div>
 
                     <div class="experience__data">
+                        <img class="penduduk__foto" src="assets/img/TotalPenduduk.png" alt="Total Penduduk">
                         <h2 class="experience__number">6.238</h2>
                         <span class="experience__description">Jumlah <br> Keseluruhan </span>
                     </div>
@@ -152,94 +156,97 @@
 
             <div class="experience__container container grid">
                 <div class="experience__content grid">
-                    <div class="experience__data">
-                        <h2 class="experience__number">845</h2>
-                        <span class="experience__description">Taman Kanak-Kanak</span>
-                    </div>
+            <canvas id="educationChart"></canvas>
 
-                    <div class="experience__data">
-                        <h2 class="experience__number">986</h2>
-                        <span class="experience__description">Sekolah Dasar</span>
-                    </div>
-
-                    <div class="experience__data">
-                        <h2 class="experience__number">130</h2>
-                        <span class="experience__description">SMP/SLTP</span>
-                    </div>
-
-                    <div class="experience__data">
-                        <h2 class="experience__number">134</h2>
-                        <span class="experience__description">SMU/SLTA</span>
-                    </div>
-
-                    <div class="experience__data">
-                        <h2 class="experience__number">78</h2>
-                        <span class="experience__description">Akademi/D1-D3</span>
-                    </div>
-
-                    <div class="experience__data">
-                        <h2 class="experience__number">301</h2>
-                        <span class="experience__description">Pendidikan Khusus</span>
-                    </div>
-                </div>
+            <script>
+                const ctx = document.getElementById('educationChart').getContext('2d');
+                const educationChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Taman Kanak-Kanak', 'Sekolah Dasar', 'SMP/SLTP', 'SMU/SLTA', 'Akademi/D1-D3', 'Pendidikan Khusus'],
+                        datasets: [{
+                            label: 'Jumlah Lulusan',
+                            data: [845, 986, 130, 134, 78, 301],
+                            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
 
             </div>
 
             <h3 class="section__title"> <br>Persebaran Agama</h3>
-
-            <div class="experience__container container">
-                <div class="experience__content"
-                    style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-                    <div class="experience__data" style="text-align: center;">
-                        <h2 class="experience__number">5872</h2>
-                        <span class="experience__description">Islam</span>
-                    </div>
-                    <div class="experience__data" style="text-align: center;">
-                        <h2 class="experience__number">286</h2>
-                        <span class="experience__description">Kristen</span>
-                    </div>
-                    <div class="experience__data" style="text-align: center;">
-                        <h2 class="experience__number">-</h2>
-                        <span class="experience__description">Katolik</span>
-                    </div>
-                    <div class="experience__data" style="text-align: center;">
-                        <h2 class="experience__number">-</h2>
-                        <span class="experience__description">Hindu</span>
-                    </div>
-                    <div class="experience__data" style="text-align: center;">
-                        <h2 class="experience__number">80</h2>
-                        <span class="experience__description">Budha</span>
-                    </div>
-                </div>
-            </div>
+    <div class="container">
+        <div class="card">
+            <img src="assets/img/Islam.png" alt="Islam">
+            <span class="religion">Islam</span>
+            <h2 class="count">5872</h2>
+        </div>
+        <div class="card">
+            <img src="assets/img/Kristen.png" alt="Kristen">
+            <span class="religion">Kristen</span>
+            <h2 class="count">286</h2>
+        </div>
+        <div class="card">
+            <img src="assets/img/Katolik.png" alt="Katolik">
+            <span class="religion">Katolik</span>
+            <h2 class="count">0</h2>
+        </div>
+        <div class="card">
+            <img src="assets/img/Hindu.png" alt="Hindu">
+            <span class="religion">Hindu</span>
+            <h2 class="count">0</h2>
+        </div>
+        <div class="card">
+            <img src="assets/img/Buddha.png" alt="Buddha">
+            <span class="religion">Buddha</span>
+            <h2 class="count">80</h2>
+        </div>
+    </div>
         </section>
 
 
         <!--==================== TAX ====================-->
         <section class="tax section" id="pajak-pembangunan">
             <h2 class="section__title">Pajak dan Pembangunan</h2>
-            <h3 class="section__title">PBB (Pajak Bumi dan Bangunan)</h3>
+            <h3 class="section__subtitle">PBB (Pajak Bumi dan Bangunan)</h3>
 
-            <div class="tax__container container grid">
-                <div class="tax__content grid">
-                    <div class="tax__data">
-                        <h2 class="tax__number">2.318</h2>
-                        <span class="tax__description">Jumlah <br> Wajib Pajak</span>
-                    </div>
-
-                    <div class="tax__data">
-                        <h2 class="tax__number">2.318</h2>
-                        <span class="tax__description">Jumlah <br> SPPT</span>
-                    </div>
-
-                    <div class="tax__data">
-                        <h2 class="tax__number">Rp. 97.534.177</h2>
-                        <span class="tax__description">Jumlah <br> Ketetapan </span>
-                    </div>
-
-                    <div class="tax__data">
-                        <h2 class="tax__number">Rp. 97.534.177</h2>
-                        <span class="tax__description">Jumlah <br> Realisasi </span>
+            <div class="container">
+                <div class="left-content">
+                     <p>Pajak Bumi dan Bangunan Kampung Terbanggi Ilir, kecamatan Bandar Mataram, Lampung Tengah</p>
+                </div>
+        
+                <div class="right-content">
+                    <div class="tax__content">
+                        <div class="tax__data">
+                            <h2 class="tax__number">2.318</h2>
+                            <span class="tax__description">Jumlah Wajib Pajak</span>
+                        </div>
+        
+                        <div class="tax__data">
+                            <h2 class="tax__number">2.318</h2>
+                            <span class="tax__description">Jumlah SPPT</span>
+                        </div>
+        
+                        <div class="tax__data">
+                            <h2 class="tax__number">Rp. 97.534.177</h2>
+                            <span class="tax__description">Jumlah Ketetapan</span>
+                        </div>
+        
+                        <div class="tax__data">
+                            <h2 class="tax__number">Rp. 97.534.177</h2>
+                            <span class="tax__description">Jumlah Realisasi</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -409,7 +416,7 @@
                     <form action="mailto:terbanggiilir60@gmail.com" method="post" enctype="text/plain"
                         class="subscribe__form">
                         <button class="button">
-                            Kirim
+                            Email
                         </button>
                     </form>
                 </div>
