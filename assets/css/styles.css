@@ -553,6 +553,36 @@ input {
   background-image: none;
 }
 
+/* Pastikan slider tidak terlalu kecil */
+.discover__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Gambar agar terlihat bagus */
+.discover__img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Navigasi (Tombol Next & Prev) */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 50%;
+}
+
+/* Pagination (bulatan kecil di bawah) */
+.swiper-pagination-bullet {
+  background: white;
+}
+
+
 /* Style untuk tombol "Program Kerja" */
 .button__container {
   display: flex;
