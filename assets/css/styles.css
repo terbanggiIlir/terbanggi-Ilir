@@ -225,7 +225,7 @@ input {
 }
 
 .container {
-  max-width: 968px;
+  max-width: 1200px;
   margin-left: var(--mb-1);
   margin-right: var(--mb-1);
 }
@@ -233,16 +233,6 @@ input {
 .grid {
   display: grid;
   gap: 1.5rem;
-}
-
-/*=============== HEADER ===============*/
-.header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: var(--z-fixed);
-  background-color: transparent;
 }
 
 /*=============== HEADER ===============*/
@@ -280,14 +270,28 @@ input {
   gap: 2.5rem;
 }
 
+/* Efek garis bawah untuk link yang aktif */
 .nav__link {
-  color: var(--text-color-light);
-  font-weight: var(--font-semi-bold);
-  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease-in-out;
 }
 
-.nav__link:hover {
-  color: var(--text-color);
+/* Garis bawah */
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 3px;
+  background-color: var(--text-color);
+  transition: width 0.3s ease-in-out;
+}
+
+/* Saat link aktif */
+.nav__link.active-link::after {
+  width: 100%;
 }
 
 .nav__close {
@@ -517,6 +521,9 @@ input {
   position: relative;
   width: 200px;
   overflow: var(--img-hidden);
+  border-style: double;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 .discover__data {
@@ -533,20 +540,27 @@ input {
 .discover__title {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-0-25);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
 }
 
 .discover__description {
   display: block;
   font-size: var(--smaller-font-size);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
 }
 
 .discover__img {
   transition: var(--img-transition);
+  border-radius: 20px;
+ 
 }
 
 .discover__img:hover {
   transform: var(--img-scale);
 }
+
 
 .swiper-container-3d .swiper-slide-shadow-left,
 .swiper-container-3d .swiper-slide-shadow-right {
@@ -557,8 +571,9 @@ input {
 .discover__container {
   width: 100%;
   max-width: 1200px;
-  margin: auto;
+  
   overflow: hidden;
+  margin-top: 5%;
 }
 
 /* Gambar agar terlihat bagus */
@@ -592,12 +607,16 @@ input {
 
 .button {
   display: inline-block;
-  color: white;
+  color: #043144;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
   transition: background 0.3s, transform 0.2s;
+}
+
+.button__container:hover{
+  color: #043144;
 }
 
 
@@ -1107,6 +1126,14 @@ canvas {
 
 .footer__social:hover {
   color: #ffcccb;
+}
+
+.footer__copy{
+  color: white;
+}
+
+.footer__location{
+  color: white;
 }
 
 /* Hak cipta */

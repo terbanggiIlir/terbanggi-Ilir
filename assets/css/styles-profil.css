@@ -132,8 +132,8 @@ h3 {
   font-family: var(--title-font);
 }
 
-ul {
-  list-style: none;
+ol {
+  color: #000;
 }
 
 a {
@@ -326,8 +326,32 @@ input {
 }
 
 /*=============== ABOUT ===============*/
+.about__dataVisi {
+  text-align: justify;
+}
+
+.about__dataSejarah {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+  line-height: 1.8;
+  max-width: 800px;
+  text-align: justify;
+}
+
 .about__data {
   text-align: center;
+  background: #ffffff; /* Warna latar belakang */
+  padding: 20px; /* Padding agar konten lebih rapi */
+  border-radius: 10px; /* Sudut melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+  transition: box-shadow 0.3s ease-in-out; /* Animasi smooth */
+}
+
+.about__data:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Bayangan lebih besar saat hover */
 }
 
 .about__container {
@@ -365,6 +389,17 @@ input {
 
 
 .about__img-overlay {
+  overflow: var(--img-hidden);
+  align-items: center;
+  background: #ffffff; /* Warna latar belakang */
+  padding: 20px; /* Padding agar konten lebih rapi */
+  border-radius: 10px; /* Sudut melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+  transition: box-shadow 0.3s ease-in-out; /* Animasi smooth */
+
+}
+
+.about__img-overlay-logo {
   overflow: var(--img-hidden);
   align-items: center;
 }
@@ -466,6 +501,14 @@ input {
 
 .footer__link:hover {
   color: #ffcccb; /* Warna hover lebih terang */
+}
+
+.footer__copy{
+  color: white;
+}
+
+.footer__location{
+  color: white;
 }
 
 /* Sosial media icons */
@@ -741,6 +784,10 @@ input {
   margin-bottom: 10px;
 }
 
+.card-container.p{
+  text-align: left;
+}
+
 /* Gaya tambahan untuk teks */
 h3 {
   margin: 10px 0 5px;
@@ -764,5 +811,8 @@ p {
 @media (max-width: 768px) {
   .card {
       width: 120px;
+  }
+  .about__img-one{
+    width:120px;
   }
 }
