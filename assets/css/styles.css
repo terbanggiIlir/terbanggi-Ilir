@@ -1311,6 +1311,7 @@ canvas {
 
   .home__data {
     align-self: flex-end;
+    margin-top: 20%;
   }
 
   .home__social {
@@ -1484,5 +1485,10 @@ canvas {
   .home__container,
   .home__img {
     height: 640px;
+  }
+
+  .home__data {
+    align-self: flex-end;
+    margin-top: 20%;
   }
 }

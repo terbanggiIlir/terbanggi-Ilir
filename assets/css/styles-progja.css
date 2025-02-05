@@ -1,0 +1,54 @@
+.btn-outline-secondary {
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.form-control {
+    width: 250px;
+    border-radius: 20px;
+}
+
+.news-card {
+    border: none;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.text-danger {
+    font-size: 0.9rem;
+}
+
+.short-desc {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.full-desc {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.btn-link {
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
