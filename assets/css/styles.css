@@ -1211,9 +1211,14 @@ canvas {
     padding: 1rem;
   }
 
+
   .experience__img,
   .video__container {
     padding: 0;
+  }
+
+  .about__description {
+    margin-bottom: var(--mb-2);
   }
 }
 
